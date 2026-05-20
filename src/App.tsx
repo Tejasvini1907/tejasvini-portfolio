@@ -33,7 +33,7 @@ const SKILLS = [
 ];
 
 const EXPERIENCE = [
-  { role: "Graphic Design & UI/UX Intern", company: "Kretos Technology", location: "Ahmedabad, India", period: "Dec 2025 – Present", current: true, bullets: ["Designed compelling interfaces and graphic assets for web and mobile apps", "Created branded wireframes, mockups, and high-fidelity prototypes", "Developed icons, layouts, and UI components using Figma and Canva"] },
+  { role: "Graphic Design & UI/UX Intern", company: "Kretos Technology", location: "Ahmedabad, India", period: "Dec 2025 – 30 March 2026", current: false, bullets: ["Designed compelling interfaces and graphic assets for web and mobile apps", "Created branded wireframes, mockups, and high-fidelity prototypes", "Developed icons, layouts, and UI components using Figma and Canva"] },
   { role: "Receptionist", company: "English World", location: "Ahmedabad, India", period: "Nov 2024 – Jun 2025", current: false, bullets: ["Managed front desk operations and handled customer inquiries", "Maintained records and coordinated with internal staff"] },
   { role: "Cloud Computing & DevOps Intern", company: "Sahana System Ltd", location: "Ahmedabad, India", period: "Jun 2024 – Aug 2024", current: false, bullets: ["Gained hands-on exposure to cloud computing and DevOps fundamentals", "Assisted in deployment and basic configuration of applications"] },
 ];
@@ -415,7 +415,7 @@ function Contact() {
               <p className="mt-6 max-w-xl text-lg text-zinc-300">I'm actively looking for full-time opportunities in Graphic Design and UI/UX — or open to freelance collaborations. Drop me a message and I'll get back to you soon.</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href={`mailto:${PROFILE.email}`} className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:scale-[1.03] hover:shadow-2xl hover:shadow-violet-500/30">{PROFILE.email}<span className="transition-transform group-hover:translate-x-1">→</span></a>
-                <a href={`tel:${PROFILE.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 hover:border-white/30">📞 {PROFILE.phone}</a>
+                <a href={PROFILE.socials[0].href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-7 py-3.5 text-sm font-semibold text-blue-200 backdrop-blur transition hover:bg-blue-500/20">LinkedIn ↗</a>
               </div>
               <div className="mt-12 flex flex-wrap gap-6 border-t border-white/10 pt-8">{PROFILE.socials.map((s) => (<a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-sm text-zinc-400 transition hover:text-white">{s.label} ↗</a>))}</div>
             </div>
